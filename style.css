@@ -24,6 +24,10 @@ h6 {
   font-family: "Fira Sans", sans-serif;
 }
 
+::selection {
+  background-color: #f0f8ff;
+}
+
 /* Specific Styling */
 
 .header {
@@ -57,10 +61,7 @@ article + article {
   margin-top: 45px;
 }
 
-::selection {
-  background-color: #f0f8ff;
-}
-
 .emoji-insert::after {
   content: "🌚";
+  padding-left: 4px;
 }
