@@ -1,3 +1,5 @@
+/* General Stylings*/
+
 *,
 *:before,
 p:after {
@@ -6,6 +8,11 @@ p:after {
 
 * {
   font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0px;
+  line-height: 1.5;
 }
 
 h1,
@@ -17,18 +24,35 @@ h6 {
   font-family: "Fira Sans", sans-serif;
 }
 
-body {
-  margin: 0px;
-}
+/* Specific Styling */
 
 .header {
   padding: 40px 25px;
   text-align: center;
   background-color: #f0f8ff;
-  padding: 80px 0px 50px 0px;
+  padding: 70px 0px 50px 0px;
 }
 
 .main {
   max-width: 800px;
   margin: 0 auto;
+  padding: 18px;
+}
+
+.nav-link {
+  padding: 5px 10px;
+  color: black;
+}
+
+.nav-link:hover {
+  color: #483d8b;
+}
+
+.nav-link:active {
+  background-color: #b0c4de;
+}
+
+article + article {
+  border-top: 1px solid black;
+  margin-top: 45px;
 }
