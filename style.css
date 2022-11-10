@@ -38,7 +38,7 @@ Specific Styling */
 .hire-badge {
   position: absolute;
   top: 1.5rem;
-  right: 5rem;
+  right: 1.5rem;
   border: 1px solid black;
   padding: 0.3em 0.3em;
   border-radius: 0.5rem;
@@ -56,6 +56,18 @@ Specific Styling */
 .emoji-insert::after {
   content: "🌚";
   padding-left: 0.3rem;
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 .main {
@@ -108,3 +120,25 @@ article + article {
   padding-left: 0.5rem;
   font-size: 0.8em;
 }
+
+@media print {
+  .hire-badge {
+    display: none;
+  }
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hire-badge {
+    position: fixed;
+  }
+
+@media screen and (min-width: 786px) {
+  .main article {
+    margin-top: 3rem;
+  }
+}
+
+
