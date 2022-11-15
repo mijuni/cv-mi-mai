@@ -43,7 +43,8 @@ Specific Styling */
 
 .header {
   text-align: center;
-  background-color: #f0f8ff;
+  _background-color: #f0f8ff;
+  background-image: linear-gradient(#f0f8ff, #E6E6FA);
   padding: 4rem 0 3rem 0;
 }
 
@@ -54,7 +55,8 @@ Specific Styling */
   border: 1px solid black;
   padding: 0.3em 0.3em;
   border-radius: 0.5rem;
-  background-color: #b0c4de;
+  _background-color: #b0c4de;
+  background-image: linear-gradient(#f0f8ff, #b0c4de);
 }
 
 .header-enclosing {
@@ -98,11 +100,11 @@ Specific Styling */
 }
 
 article {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 article + article {
-  border-top: 1px solid black;
+  border-top: 1px solid #E6E6FA;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -113,7 +115,7 @@ article + article {
 
 .to-the-left {
   position: relative;
-  left: -0.5rem;
+  left: -2rem;
 }
 
 .experience-header {
@@ -169,9 +171,36 @@ flex-direction: row;
 align-items: baseline;
 justify-content: space-between;
   }
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+   _grid-column-gap: 2rem;
+  }
+
+  .content-wrapper {
+    margin-top: 4rem;
+  }
+
+  .footer {
+    text-align: center;
+    background-image: linear-gradient(#f0f8ff, #E6E6FA);
+  }
+
+}
+
+.arrow {
+  display: block;
+  text-align: center;
 }
 
 .to-first-header {
   color: #b0c4de;
 }
 
+.footer {
+  text-align: center;
+  background-image: linear-gradient(#f0f8ff, #E6E6FA);
+  height: 5rem;
+  padding-top: 0.5rem;
+}
