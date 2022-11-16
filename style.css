@@ -27,6 +27,14 @@ html {
 body {
   margin: 0px;
   line-height: 1.5;
+  --main-color: black;
+  --background-color: #E6E6FA;
+  --text-color: black;
+  --accent-color: #f0f8ff;
+  --accent-text-color: black;
+  --nav-link-active-bg-color: #b0c4de;
+  --nav-link-hover: #483d8b;
+
 }
 
 h1,
@@ -44,7 +52,7 @@ Specific Styling */
 .header {
   text-align: center;
   _background-color: #f0f8ff;
-  background-image: linear-gradient(#f0f8ff, #E6E6FA);
+  background-image: linear-gradient(var(--accent-color), var(--background-color));
   padding: 4rem 0 3rem 0;
 }
 
@@ -52,11 +60,11 @@ Specific Styling */
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   padding: 0.3em 0.3em;
   border-radius: 0.5rem;
   _background-color: #b0c4de;
-  background-image: linear-gradient(#f0f8ff, #b0c4de);
+  background-image: linear-gradient(var(--accent-color), var(--nav-link-active-bg-color));
 }
 
 .header-enclosing {
@@ -87,16 +95,16 @@ Specific Styling */
 
 .nav-link {
   padding: 0.4em 0.3em;
-  color: black;
+  color: var(--main-color);
   /* margin: 1em 1em; not suitable for Mobile First*/
 }
 
 .nav-link:hover {
-  color: #483d8b;
+  color: var(--nav-link-hover);
 }
 
 .nav-link:active {
-  background-color: #b0c4de;
+  background-color: var(--nav-link-active-bg-color);
 }
 
 article {
@@ -104,13 +112,13 @@ article {
 }
 
 article + article {
-  border-top: 1px solid #E6E6FA;
+  border-top: 1px solid var(--background-color);
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 
 ::selection {
-  background-color: #f0f8ff;
+  background-color: var(--accent-color);
 }
 
 .to-the-left {
@@ -167,9 +175,9 @@ article + article {
 
   .experience-header {
     display: flex;
-flex-direction: row;
-align-items: baseline;
-justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
   .main-article {
@@ -184,7 +192,7 @@ justify-content: space-between;
 
   .footer {
     text-align: center;
-    background-image: linear-gradient(#f0f8ff, #E6E6FA);
+    background-image: linear-gradient(var(--accent-color), var( --background-color));
   }
 
 }
@@ -195,12 +203,13 @@ justify-content: space-between;
 }
 
 .to-first-header {
-  color: #b0c4de;
+  color: var(--nav-link-active-bg-color);
 }
 
 .footer {
   text-align: center;
-  background-image: linear-gradient(#f0f8ff, #E6E6FA);
+  background-image: linear-gradient(var(--accent-color), var( --background-color));
   height: 5rem;
   padding-top: 0.5rem;
 }
+
