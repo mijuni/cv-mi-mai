@@ -63,8 +63,16 @@ Specific Styling */
   border: 1px solid var(--main-color);
   padding: 0.3em 0.3em;
   border-radius: 0.5rem;
+  opacity: 0.5;
   _background-color: #b0c4de;
   background-image: linear-gradient(var(--accent-color), var(--nav-link-active-bg-color));
+  transform-origin: top right;
+  transition: transform 0.5s ease-in-out;
+}
+
+.header:hover .hire-badge, .header:focus-within .hire-badge  {
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 .header-enclosing {
@@ -96,11 +104,20 @@ Specific Styling */
 .nav-link {
   padding: 0.4em 0.3em;
   color: var(--main-color);
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease-in-out;
   /* margin: 1em 1em; not suitable for Mobile First*/
 }
 
 .nav-link:hover {
   color: var(--nav-link-hover);
+  background-color: var(--accent-color);
+}
+
+.nav-link:focus {
+  background-color: var(--accent-color);
+  outline-color: var(--main-color);
+  outline-style: double;
 }
 
 .nav-link:active {
